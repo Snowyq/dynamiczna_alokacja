@@ -11,5 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: clang flitr_w_c.c
+      - run: ./a.out
           
           
