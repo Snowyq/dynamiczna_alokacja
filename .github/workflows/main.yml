@@ -1,0 +1,15 @@
+name: test
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    strategy:
+      matrix:
+        platform: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{matrix.platform}}
+    steps:
+      - uses: actions/checkout@v2
+      - run: clang flitr_w_c.c
+          
+          
