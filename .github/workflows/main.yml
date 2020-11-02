@@ -11,6 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: clang flitr_w_c.c
-      - run: ./a.out <main.in
+      - run: ./a.out <main.in >test.out.actual
+      - run: diff test.out test.out.actual
           
           
